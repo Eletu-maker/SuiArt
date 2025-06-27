@@ -1,4 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { WalletProvider } from '@suiet/wallet-kit';
+import '@suiet/wallet-kit/style.css';
+import { ConnectButton } from '@suiet/wallet-kit';
+import logo from './assets/images/suimark.png'
 
 function Navbar() {
     const navigate = useNavigate(); 
@@ -8,7 +12,7 @@ function Navbar() {
 
     return (
         <div className="navbar">
-            <span className="logo" onClick={goToHomePage}>SuiArt</span>
+            <span className="logo" onClick={goToHomePage}><img src={logo} width={100} height={25}/> </span>
             <ul>
                
                 <li onClick={() => navigate("/creation")}>My NFT</li>
@@ -16,7 +20,7 @@ function Navbar() {
                 <li onClick={() => navigate("/mint")}>Mint NFT</li>
 
             </ul>
-            <span className="connect">Connect Wallet <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#0f68d7" d="M3 20v-6l8-2l-8-2V4l19 8z"/></svg></span>
+             <ConnectButton />
         </div>
     );
 }

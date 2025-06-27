@@ -4,6 +4,8 @@ import Popup from "./Popup";
 import icon1 from "./assets/images/write.png"
 import art1 from "./assets/images/ArtWork1.png"
 import Footer from "./Footer"
+import display from "./assets/images/displayArt.png"
+import display2 from "./assets/images/display2.png"
 function GridPoint(){
     const navigate = useNavigate();
      const [showPopup, setShowPopup] = useState(false);
@@ -75,10 +77,10 @@ function GridPoint(){
             <div className="third-section">
                 <div>
                     
-                    <img src={art1} alt="image" width={140} height={220}></img>
+                    <img src={display} alt="image" width={270} height={390}></img>
             
                     
-                    <img src={art1} alt="image" width={140} height={220}></img>
+                    <img src={display2} alt="image" className="rotate" width={270} height={390}></img>
                 </div>
                 <div className="story">
                     <h2>Own Your Story, Digitalize Your Art.</h2>

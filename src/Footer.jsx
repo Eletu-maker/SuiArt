@@ -1,8 +1,9 @@
 import icon1 from "./assets/images/write.png"
+import logo from './assets/images/suimark.png'
 function Footer(){
     return(
         <footer>
-            <div className="footer"><span className="logo">SuiArt</span>  <div><span>About us</span><span>Cultural Protection</span><span>Blog</span><span>FAQ</span><span>Context</span></div></div>
+            <div className="footer"><span className="logo"><img src={logo} width={100} height={25}/></span>  <div><span>About us</span><span>Cultural Protection</span><span>Blog</span><span>FAQ</span><span>Context</span></div></div>
             <hr></hr>
             <div className="footer">
                 <div>

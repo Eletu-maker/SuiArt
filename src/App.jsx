@@ -1,19 +1,25 @@
 import Mint from "./Mint";
 import Home from "./Home";
 import MarketPlace from "./MarketPlace";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Creation from "./Creation";
+import Navbar from "./Navbar";
+import { WalletProvider } from '@suiet/wallet-kit';
+import '@suiet/wallet-kit/style.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/marketPlace" element={<MarketPlace/>}/>
-                <Route path="/mint" element={<Mint />} />
-                <Route path="/creation" element={<Creation/>}/>
-            </Routes>
-        </BrowserRouter>
+        <WalletProvider>
+            <BrowserRouter>
+               
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/marketPlace" element={<MarketPlace />} />
+                    <Route path="/mint" element={<Mint />} />
+                    <Route path="/creation" element={<Creation />} />
+                </Routes>
+            </BrowserRouter>
+        </WalletProvider>
     );
 }
 
