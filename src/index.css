@@ -1,0 +1,355 @@
+.navbar{
+  background-color: #D3D3D3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.navbar ul{
+  display: flex;
+   justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:white;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+
+.logo:hover, .navbar ul li:hover{
+  cursor: pointer;
+  color: black;
+}
+.connect{
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+    height: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+
+}
+
+
+
+.connect:hover{
+  transform:  scale(1.05);
+}
+
+.firstDisplay{
+  background-image: url("./assets/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 105vh;
+  background-color: rgb(1, 24, 41);
+  color: white;
+   
+ 
+}
+
+.firstDisplay section{
+  justify-items: center;
+  padding-top: 50px;
+}
+
+.firstDisplay section h1 {
+  margin: 10px;
+  font-size: 4.5rem;
+}
+
+.firstDisplay section h2 {
+  font-size: 40px;
+}
+
+.firstDisplay section h4 {
+  font-size: 20px;
+  
+}
+
+
+.firstDisplay section p{
+  margin-top: 5px;
+  margin-bottom: 40px;
+      font-size: 30px;
+}
+
+.firstDisplay section div{
+  gap: 20px;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+
+.explore-button{
+  padding: 5px 17px;
+  border: groove;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: white;
+}
+
+.explore-button:hover{
+   background-color: #4DA2FF;
+    transform:  scale(1.05);
+    cursor: pointer;
+
+}
+
+.NFT-button{
+  background-color: #4DA2FF;
+  padding: 5px 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.NFT-button:hover{
+  padding: 5px 17px;
+  border: groove;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+
+.firstDisplay section h4{
+  font-weight: normal;
+}
+
+
+.secondDisplay{
+  background-color: #011829;
+  color: white;
+}
+
+.context-container{
+   border: 1px solid white;
+  justify-items: center;
+  padding: 20px;
+}
+
+.grid-container{
+  display: flex;
+  justify-content: center;
+   padding: 0 70px;
+  
+  
+  
+}
+
+.content{
+   text-align: center;
+}
+
+.Art-container{
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+
+.ArtWork{
+  justify-items: center;
+  margin-bottom: 20px;
+  padding: 0 70px;
+}
+
+.Art-display{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.Art-name{
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.third-section{
+   border: 1px solid white;
+   margin: 5px;
+} 
+
+
+footer{
+  background-color: #030F1C;
+  padding: 20px 40px;
+}
+
+.footer{
+  display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 5px 10px;
+
+}
+
+footer div{
+  display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.third-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 45px 150px;
+}
+
+.third-section img{
+  padding: 2px;
+}
+
+h4{
+  margin: 0;
+  padding: 20px;
+}
+
+.Mint-background{
+  background-color: #011829;
+  color: white;
+  position: relative;
+}
+
+.Mint{
+  justify-items: center;
+   padding: 40px 0;
+}
+
+
+.Mint input[type="text"],
+.Mint input[type="number"] {
+  background-color: #011829;
+  color: white;
+    padding: 12px 5px;
+    border-radius: 8px;
+    border: 1px solid;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+
+.Mint button{
+  background-color: #4DA2FF;
+  color: black;
+  padding: 5px 10px ;
+  width: 220px;
+  height: 30px;
+}
+
+.Mint button:hover{
+  cursor: pointer;
+  background-color: #011829;
+  color: white;
+  transform: scale(1.05);
+}
+
+.NFT-image{
+  border: 1px solid;
+  height: 230px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Mint-upload{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+ 
+}
+
+.category{
+  display: flex;
+   justify-content: space-between;
+}
+
+.category li{
+   list-style-type: none;
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: white;
+    color: #000;
+    border-radius: 20px;
+}
+
+
+.category li:hover{
+  cursor: pointer;
+  background-color: #4DA2FF;
+  color: white;
+}
+
+.story{
+  justify-items: center;
+      
+}
+
+.PopUp{
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.PopUp h4{
+  padding: 0;
+}
+
+.PopUp-background{
+  background-color: #4DA2FF;
+  border-radius: 20px;
+  padding: 10px;
+  position: absolute;
+}
+
+.PopUp p{
+  margin: 5px;
+}
+
+.PopUp button{
+  background-color: #4DA2FF;
+  border: none;
+  padding: 5px 10px;
+  
+}
+
+.PopBoder{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.PopUp h2{
+  margin: 10px;
+}
+
+.cancel {
+  display: flex;
+  justify-content: flex-end;
+  width: 99%;
+  cursor: pointer;
+  padding-top: 20px;
+}
