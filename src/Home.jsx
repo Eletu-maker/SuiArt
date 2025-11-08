@@ -4,9 +4,9 @@ import DashBoard from "./DashBoard"
 
 function Home(){
     return(<div>
-{/* <FirstDisplay/>
-<GridPoint/> */}
-<DashBoard/>
+ <FirstDisplay/>
+<GridPoint/> 
+
 
 </div>)
 

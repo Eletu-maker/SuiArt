@@ -6,19 +6,21 @@ import Navbar from "./Navbar";
 import { WalletProvider } from '@suiet/wallet-kit';
 import '@suiet/wallet-kit/style.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NFTProvider } from './NFTContext';
 
 function App() {
     return (
         <WalletProvider>
-            <BrowserRouter>
-               
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/marketPlace" element={<MarketPlace />} />
-                    <Route path="/mint" element={<Mint />} />
-                    <Route path="/creation" element={<Creation />} />
-                </Routes>
-            </BrowserRouter>
+            <NFTProvider>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/marketPlace" element={<MarketPlace />} />
+                        <Route path="/mint" element={<Mint />} />
+                        <Route path="/creation" element={<Creation />} />
+                    </Routes>
+                </BrowserRouter>
+            </NFTProvider>
         </WalletProvider>
     );
 }

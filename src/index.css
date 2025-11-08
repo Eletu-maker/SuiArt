@@ -1,67 +1,163 @@
-.navbar{
-  background-color: rgba(211, 211, 211,0.2);
+/* CSS Reset - Remove default browser margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #011829;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4da2ff;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a8bcb;
+}
+
+body {
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+   gap: 45px;
+  padding: 10px 0px;
+}
+
+.footer-top div {
+  display: flex;
+  align-items: center;
+  
+}
+
+.footer-top div:last-child {
+  gap: 5px;
+}
+
+
+.apps{
+  display: flex;
+  gap: 10px;
+}
+.navbar {
+  background-color: rgba(211, 211, 211, 0.2);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
-  
+  align-items: center;
+  padding: 5px 20px;
+  position: relative;
 }
 
-.navbar ul{
+.navbar ul {
   display: flex;
-   justify-content: space-between;
+  justify-content: space-between;
 }
 
-.navbar ul li{
-    list-style-type: none;
-    margin-right: 20px;
-    cursor: pointer;
+.navbar ul li {
+  list-style-type: none;
+  margin-right: 20px;
+  cursor: pointer;
 }
-.logo{
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(211, 211, 211, 0.2);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    display: none;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .navbar ul {
+    display: none;
+  }
+}
+
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color:white;
+  color: white;
   margin-top: 12px;
   margin-left: 10px;
 }
 
-
-.logo:hover, .navbar ul li:hover{
+.logo:hover,
+.navbar ul li:hover {
   cursor: pointer;
   color: black;
 }
-.connect{
-    margin-right: 10px;
-    background-color: white;
-    color: black;
-    height: 20px;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    display: flex;
-    gap: 4px;
-
+.connect {
+  margin-right: 10px;
+  background-color: white;
+  color: black;
+  height: 20px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
 }
 
-
-
-.connect:hover{
-  transform:  scale(1.05);
+.connect:hover {
+  transform: scale(1.05);
 }
 
-.firstDisplay{
+.firstDisplay {
   background-image: url("./assets/images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 105vh;
+  height: 100vh;
   background-color: rgb(1, 24, 41);
   color: white;
-   
- 
+  flex: 1;
 }
 
-.firstDisplay section{
+.firstDisplay section {
   justify-items: center;
   padding-top: 70px;
 }
@@ -73,29 +169,26 @@
 
 .firstDisplay section h2 {
   font-size: 40px;
-  padding-top: 90px;
+  
 }
 
 .firstDisplay section h4 {
   font-size: 20px;
-  
 }
 
-
-.firstDisplay section p{
+.firstDisplay section p {
   margin-top: 35px;
   margin-bottom: 40px;
-      font-size: 30px;
+  font-size: 30px;
 }
 
-.firstDisplay section div{
+.firstDisplay section div {
   gap: 20px;
   display: flex;
   margin-bottom: 40px;
 }
 
-
-.explore-button{
+.explore-button {
   padding: 5px 17px;
   border: groove;
   background-color: rgba(0, 0, 0, 0);
@@ -103,169 +196,328 @@
   color: white;
 }
 
-.explore-button:hover{
-   background-color: #4DA2FF;
-    transform:  scale(1.05);
-    cursor: pointer;
-
+.explore-button:hover {
+  background-color: #4da2ff;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-.NFT-button{
-  background-color: #4DA2FF;
+.NFT-button {
+  background-color: #4da2ff;
   padding: 5px 17px;
-    border: none;
-    cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
 
-.NFT-button:hover{
+.NFT-button:hover {
   padding: 5px 17px;
   border: groove;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
-
-.firstDisplay section h4{
+.firstDisplay section h4 {
   font-weight: normal;
 }
 
-
-.secondDisplay{
+.secondDisplay {
   background-color: #011829;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.context-container{
-   border: 1px solid white;
+@media (min-width: 576px) {
+  .grid-container {
+        padding: 80px 70px 10px 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    padding: 80px 70px 10px 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    padding: 80px 70px 10px 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-container {
+    padding: 80px 70px 10px 70px;
+  }
+}
+
+.context-container {
+  border: 1px solid white;
   justify-items: center;
   padding: 20px;
-}
-
-.grid-container{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-   padding: 0 70px;
-  
-  
-  
 }
 
-.content{
-   text-align: center;
+@media (max-width: 400px) {
+  .grid-container {
+    padding: 350px 70px 10px 70px;
+  }
 }
 
-.Art-container{
+@media (max-width: 500px) and (min-width: 401px) {
+  .grid-container {
+    padding: 30px 70px 10px 70px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 501px) {
+  .grid-container {
+    padding: 300px 70px 10px 70px;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 601px) {
+  .grid-container {
+    padding: 250px 70px 10px 70px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .grid-container {
+    padding: 150px 70px 10px 70px;
+  }}
+
+  @media (max-width: 1200px) and (min-width: 901px) {
+  .grid-container {
+    padding: 10px 70px 10px 70px;
+  
+}
+  }
+.content {
+  text-align: center;
+}
+
+.Art-container {
   border: 1px solid white;
   cursor: pointer;
-}
-
-
-.ArtWork{
-  justify-items: center;
-  margin-bottom: 20px;
-  padding: 0 70px;
-}
-
-.Art-display{
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.Art-name{
-  margin: 5px;
-  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 15px 10px;
+  min-height: 220px;
+  box-sizing: border-box;
 }
 
-.third-section{
-   border: 1px solid white;
-   margin: 5px;
-} 
-
-
-footer{
-  background-color: #030F1C;
-  padding: 20px 40px;
+.Art-container img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
 }
 
-.footer{
+.Art-display {
   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   padding: 5px 10px;
-
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+  align-items: flex-start;
 }
 
-footer div{
-  display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+.Art-display::-webkit-scrollbar {
+  height: 8px;
 }
 
-.third-section{
+.Art-display::-webkit-scrollbar-track {
+  background: #012a45;
+}
+
+.Art-display::-webkit-scrollbar-thumb {
+  background: #4da2ff;
+  border-radius: 4px;
+}
+
+.Art-display::-webkit-scrollbar-thumb:hover {
+  background: #3a8bcb;
+}
+
+.Art-container {
+  border: 1px solid white;
+  cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
-  margin: 45px 150px;
+  min-height: 200px;
+  min-width: 160px;
 }
 
-.third-section img{
+.Art-container img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.Art-name {
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+}
+
+.Sui-price {
+  color: #4da2ff;
+  font-weight: bold;
+}
+
+.ArtWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 5px 70px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.third-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 45px;
+  border: inset;
+  padding: 10px ;
+}
+
+.third-section > div {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 300px;
+}
+
+.third-section .story {
+  flex: 1;
+  margin: 0 10px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.third-section img {
   padding: 2px;
+  max-width: 100%;
+  height: auto;
 }
 
-h4{
+
+@media (max-width: 768px) {
+  .third-section {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .third-section > div,
+  .third-section .story {
+    min-width: 100%;
+    margin: 10px 0;
+  }
+
+  .images-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+h4 {
   margin: 0;
   padding: 20px;
 }
 
-.Mint-background{
+.Mint-background {
   background-color: #011829;
   color: white;
   position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.Mint{
+.Mint {
+  flex: 1;
   justify-items: center;
-   padding: 40px 0;
+  padding: 40px 0;
 }
 
+.Mint h2 {
+  text-align: center;
+}
+
+.Mint p {
+  margin: 10px 0;
+  text-align: center;
+}
 
 .Mint input[type="text"],
 .Mint input[type="number"] {
   background-color: #011829;
   color: white;
-    padding: 12px 5px;
-    border-radius: 8px;
-    border: 1px solid;
-    outline: none;
-    font-size: 1rem;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 15px;
+  padding: 12px 5px;
+  border-radius: 8px;
+  border: 1px solid;
+  outline: none;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
 }
 
-
-.Mint button{
-  background-color: #4DA2FF;
+.Mint button {
+  background-color: #4da2ff;
   color: black;
-  padding: 5px 10px ;
+  padding: 5px 10px;
   width: 220px;
   height: 30px;
+  display: block;
+  
 }
 
-.Mint button:hover{
+.Mint button:hover {
   cursor: pointer;
   background-color: #011829;
   color: white;
   transform: scale(1.05);
 }
 
-.NFT-image{
+.NFT-image {
   border: 1px solid;
   height: 230px;
   width: 230px;
@@ -274,78 +526,75 @@ h4{
   align-items: center;
 }
 
-.Mint-upload{
+.Mint-upload {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
- 
+  justify-content: center;
 }
 
-.category{
+.category {
   display: flex;
-   justify-content: space-between;
+  justify-content: space-between;
 }
 
-.category li{
-   list-style-type: none;
-    margin-right: 20px;
-    cursor: pointer;
-    padding: 5px 10px;
-    background-color: white;
-    color: #000;
-    border-radius: 20px;
-}
-
-
-.category li:hover{
+.category li {
+  list-style-type: none;
+  margin-right: 20px;
   cursor: pointer;
-  background-color: #4DA2FF;
+  padding: 5px 10px;
+  background-color: white;
+  color: #000;
+  border-radius: 20px;
+}
+
+.category li:hover {
+  cursor: pointer;
+  background-color: #4da2ff;
   color: white;
 }
 
-.story{
+.story {
   justify-items: center;
   padding: 100px;
-      
 }
 
-.PopUp{
+.PopUp {
   display: flex;
   padding: 10px;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-.PopUp h4{
+.PopUp h4 {
   padding: 0;
 }
 
-.PopUp-background{
-  background-color: #4DA2FF;
+.PopUp-background {
+  background-color: #4da2ff;
   border-radius: 20px;
   padding: 10px;
   position: absolute;
 }
 
-.PopUp p{
+.PopUp p {
   margin: 5px;
 }
 
-.PopUp button{
-  background-color: #4DA2FF;
+.PopUp button {
+  background-color: #4da2ff;
   border: none;
   padding: 5px 10px;
-  
 }
 
-.PopBoder{
+.PopBoder {
   border: 1px solid white;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
 }
 
-.PopUp h2{
+.PopUp h2 {
   margin: 10px;
 }
 
@@ -357,44 +606,136 @@ h4{
   padding-top: 20px;
 }
 
-
-.details{
+.details {
   border: 1px solid white;
   padding: 10px 50px 10px 20px;
   display: flex;
 }
 
-.details span{
+.details span {
   padding: 7px;
 }
 
-.worth{
+.worth {
   border: 1px solid white;
   padding: 10px 50px 10px 20px;
-  
 }
 
-.worth h2{
+.worth h2 {
   margin: 0;
 }
 
-.worth p{
+.worth p {
   margin: 2px;
 }
 
-.verify{
+.verify {
   border: 1px solid white;
   padding: 25px 50px 10px 20px;
-  background-color: #4DA2FF;
+  background-color: #4da2ff;
   cursor: pointer;
-  
 }
 
-.verify:hover{
+.verify:hover {
   background-color: #1266be;
-  
 }
 
-.dash{
+.dash {
   display: flex;
+}
+
+.Market-Art-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 120px;
+  overflow-y: auto;
+  max-height: 80vh;
+  margin: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Market-Art-display::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Market-Art-display::-webkit-scrollbar-track {
+  background: #012a45;
+}
+
+.Market-Art-display::-webkit-scrollbar-thumb {
+  background: #4da2ff;
+  border-radius: 4px;
+}
+
+.Market-Art-display::-webkit-scrollbar-thumb:hover {
+  background: #3a8bcb;
+}
+
+.Art-container {
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  min-height: 200px;
+  min-width: 160px;
+  flex: 1 1 calc(20% - 20px);
+}
+
+@media (max-width: 1200px) {
+  .Art-container {
+    flex: 1 1 calc(25% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .Art-container {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .Art-container {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .Art-container {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
+
+.market-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .market-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .market-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .market-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .market-row {
+    grid-template-columns: 1fr;
+  }
 }
